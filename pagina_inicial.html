@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo_pagina_inicial.css"/>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript.js"></script>
+	<script>
+		function login() // Fazer o link
+		{
+			window.location.href = "login.html";
+		}
+		
+		function faleconosco() // Fazer o link
+		{
+			window.location.href = "fale_conosco.html";
+		}
+		
+		function loja() // Fazer o link
+		{
+			window.location.href = "loja.html";
+		}
+	</script>
+</head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------------- MENU ------------------------------>
+<!----------------------------------------------------------->
+<header id="menu">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo" title="NW Freela's"></a> <!-- Logo -->
+
+<section id="menu_loja_especifico"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="loja()">LOJA</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">SERVIÇOS</button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>Programação e outros</center></a>
+		<a href="selecao_de_servicos_design.html"><center>Design</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">CADASTRE-SE</button> <!-- Botão CADASTRE-SE -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="cadastro_cliente.html"><center>Clientes</center></a>
+		<a href="cadastro_profissional.html"><center>Profissionais</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="faleconosco()">FALE CONOSCO</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="login()">LOGIN </button> <!-- Botão LOGIN -->
+</section>
+
+</header>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO MENU -------------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!------------------- MENU MOBILE --------------------------->
+<!----------------------------------------------------------->
+
+<section id="menu_mobile_mobile">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo_mobile" title="NW Freela's"></a> <!-- Logo -->
+
+<section id="menu_mobile"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu-mobile"><img src="imagens/menu_mobile.png" width="200px"></button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu_mobile"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>SERVIÇOS: Programação e outros</center></a><br>
+		<a href="selecao_de_servicos_design.html"><center>SERVIÇOS: Design</center></a><br>
+		<a href="loja.html"><center>LOJA</center></a><br>
+		<a href="cadastro_cliente.html"><center>CADASTRE - SE: Clientes</center></a><br>
+		<a href="cadastro_profissional.html"><center>CADASTRE - SE: Profissionais</center></a><br>
+		<a href="fale_conosco.html"><center>FALE CONOSCO</center></a><br>
+		<a href="login.html"><center>LOGIN</center></a>
+	</section>
+</section>
+
+</section>
+
+<!----------------------------------------------------------->
+<!---------------- FIM DO MENU MOBILE ----------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<section id="plano_de_fundo"> <!-- Parte do inicial do site -->
+	<h3><center>Por que escolher nosso site?</center></h3> <br>
+	<h4><center>Nosso site da a opção de escolher o <br>
+	que realmente você quer e precisa, com um serviço <br>
+	bem feito. <br> 
+	Simples pra pedir, eficiente para receber. <br>
+	Escolha NW Freela's.</center></h4>
+</section>
+
+<section id="servicos"> <!-- Parte dos serviços -->
+	<h1>Você ja sonhou em ter seu proprio site? <br> <!-- Título -->
+	Ou sua própria logotipo?</h1>
+	<h2>Se você sempre sonhou em ter seu site, <br> <!-- Texto -->
+	do jeitinho que sempre quis, aquela logomarca <br>
+	que estampa o nome da sua empresa. Contrate um <br> 
+	de nossos serviço e concretize o que você idealizou! <br>
+	Conte com a equipe NW Freelancer's</h2>
+	
+	<section id="menu_servicos"> <!-- As partes do menu ficam dentro -->
+		<button class="button-menu-servicos">CONHEÇA NOSSOS SERVIÇOS  ▼</button> <!-- Botão SERVIÇOS -->
+		<section id="sub_menu_servicos"> <!-- Sub menu (escondido) de SERVIÇOS -->
+			<a href="selecao_de_servicos_programacao_e_outros.html"><center>Programação e outros</center></a>
+			<a href="selecao_de_servicos_design.html"><center>Design</center></a>
+		</section>
+	</section>
+</section>
+<!----------------------------------------------------------->
+<!------------- FIM DAS INFORMAÇÕES DO SITE ----------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!------------------------ RODAPÉ --------------------------->
+<!----------------------------------------------------------->
+<section id="rodape">
+	<section id="conteudo">TODOS OS DIREITOS RESERVADOS - NW FREELANCER'S 2017 ©</section>
+</section>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO RODAPÉ ------------------------>
+<!----------------------------------------------------------->
+
+
+<script>
+$(window).scroll(function() { // Quando o scroll passa de 150, atribui a classe efeito a h1 e h2, se diminui de 150 remove
+   var scroll = $(window).scrollTop();
+   
+   if (scroll > 150) {
+      $('h1').addClass('efeito');
+	  $('h2').addClass('efeito');
+   } else {
+      $('h1').removeClass('efeito');
+	  $('h2').removeClass('efeito');
+   }
+});
+</script>
+</body>
+</html>

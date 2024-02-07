@@ -1,0 +1,123 @@
+﻿<?php
+session_start();
+// Se não estiver logado
+if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"]))
+{
+	header("Location: login_selecionar_quiz_programacao_e_outros_sites.html"); // Redirecionar para a pagina de login
+	exit; // Fechar qualquer sessão
+}
+// Se estiver logado
+else
+{
+
+}
+?>
+
+<?php
+$pergunta_1 = $_POST['pergunta_1']; 
+$pergunta_2 = $_POST['pergunta_2'];  
+$pergunta_3 = $_POST['pergunta_3'];
+$pergunta_4 = $_POST['pergunta_4'];
+$pergunta_5 = $_POST['pergunta_5'];
+$descricao = $_POST['descricao'];
+
+$valtotal = $pergunta_4;
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo_cdc_sites.css"/>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.maskedinput.js" ></script>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script>
+		function login() // Fazer o link
+		{
+			window.location.href = "login.html";
+		}
+		
+		function faleconosco() // Fazer o link
+		{
+			window.location.href = "fale_conosco.html";
+		}
+		
+		jQuery(function($){ // Máscara
+			$("#numerodocartao").mask("3333-3333-3333-3333"); // Facilita preenchendo os espaços do Celular
+			$("#datadevalidade").mask("33/3333"); // Facilita preenchendo os espaços da Data de Nascimento
+		});
+	</script>
+<head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------------- MENU ------------------------------>
+<!----------------------------------------------------------->
+<header id="menu">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo"></a> <!-- Logo -->
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">SERVIÇOS</button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>Programação e outros</center></a>
+		<a href="selecao_de_servicos_design.html"><center>Design</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">CADASTRE-SE</button> <!-- Botão CADASTRE-SE -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="cadastro_cliente.html"><center>Clientes</center></a>
+		<a href="cadastro_profissional.html"><center>Profissionais</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="faleconosco()">FALE CONOSCO</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<button class="button-login" onclick="login()">LOGIN</button> <!-- Para acessar a página de login -->
+
+</header>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO MENU -------------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<section id="cadastro_profissional">
+
+<h1><center>Cartão de Crédito:</center></h1>
+<fieldset> <!-- Fieldset para criar a área -->
+<h1></h1>
+
+<h2 id="total">Total da compra: <?php echo $valtotal; ?></h2>
+<form method="post" action="">
+	<input type="text" name="nome" placeholder="Nome completo conforme no cartão de crédito" maxlength="255" required /> <br> <!-- Campo para informar o nome com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="nome" placeholder="Número do cartão" maxlength="255" required id="numerodocartao" /> <br> <!-- Campo para informar o nome com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="datadevalidade" placeholder="Data de Validade" maxlength="7" required id="datadevalidade" /> <br> <!-- Campo para informar data de validade com no máximo 7 dígitos obrigatório -->
+	<input type="text" name="codigodeseguranca" placeholder="Codigo de Segurança" maxlength="255" required /> <br><br> <!-- Campo para informar o Código de Segurança como no máximo 255 caracteres obrigatório -->
+
+<fieldset><legend id="sexo">Número de parcelas:</legend>
+	<select name="numerodeparcelas"> <!-- Selecionar opções -->
+		<option>1</option> <!-- Opção -->
+	  	<option>2</option> <!-- Opção -->
+		<option>3</option> <!-- Opção -->
+	</select>	
+</fieldset> <br>
+
+	<input type="submit" value="Confirmar compra" id="submit"/> <!-- Botão de Enviar -->
+</form>
+</fieldset>
+
+</section>
+
+<!----------------------------------------------------------->
+<!------------- FIM DAS INFORMAÇÕES DO SITE ----------------->
+<!----------------------------------------------------------->
+</body>
+</html>

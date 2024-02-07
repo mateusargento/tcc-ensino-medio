@@ -1,0 +1,204 @@
+﻿@charset "UTF-8";
+
+img#logo
+{
+	width: 300px;
+	height: 95%;
+	position: absolute;
+	z-index: 1;
+	top: 1px;
+	left: 5%;
+}
+
+body
+{
+	background: url("imagens/imagem_cadastro_2.jpg")no-repeat center center fixed;;
+}	
+
+/* -----------------------------------------------------------
+   ----------------------- MENU ------------------------------
+   ----------------------------------------------------------- */
+header#menu /* Caixa onde os links do menu estão */
+{
+	width: 100%;
+	height: 100px;
+	background: url("imagens/imagem_menu.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+section#menu /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_loja_especifico /* Menu */
+{
+	width: 10%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_login /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	border: 1px solid;
+	position: relative;
+	top: 0%;
+	left: 85%;
+}
+
+section#sub_menu /* sub menu (escondidos) */
+{
+	width: 100%;
+	background: rgb(0, 140, 198);
+	font: 16pt LiberationSans;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 140, 198);
+	position: absolute;
+	z-index: 1; /* Para ficar em cima das demais */
+}
+
+section#sub_menu a/* Links do sub menu (escondidos) */
+{
+	color: rgb(255, 255, 255);
+	padding: 10px 20px; /* Borda interna */
+    display: block; /* Para ter o hover funcionando */
+	transition: 0.5s;
+}
+
+section#sub_menu a:hover/* Links do sub menu (escondidos) quando passa o mouse em cima */
+{
+	background: rgb(250, 242, 231);
+	color: rgb(0, 140, 198);
+}
+
+.button-menu /* Botão com os links sub menu (escondidos) hehe */
+{
+	width: 100%;
+	font: 16pt LiberationSans;
+	font-weight: bold;
+	color: rgb(0, 140, 198);
+	background: rgba(250, 242, 231, 0.1);
+	border: none;
+	padding: 37px 10px; /* Borda Interna */
+	cursor: pointer; /* Para ficar com uma mãozinha quando passa o mouse em cima */
+}
+
+section#sub_menu /* Para esconder menu até que seja requerido */
+{
+	display: none;
+}
+
+section#menu:hover section#sub_menu /* Aparece quando passa o mouse em cima */
+{
+	display: block;
+}
+
+a:link, a:visited  /* Para tirar aparencia feia do link */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* tanto quando passar o mouse quanto quando depois de clicado */
+{
+	text-decoration: none;
+}
+/* -----------------------------------------------------------
+   -------------------- FIM DO MENU --------------------------
+   ----------------------------------------------------------- */
+   
+
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+
+section#login
+{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 25%;
+	background: rgba(230, 230, 230, 0.9);
+}
+
+fieldset
+{
+	border: 1px solid;
+	border-color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+	position: relative;
+	top: 100px;
+}
+
+h1
+{
+	font: 38pt Hanged_Letters;
+	color: rgb(0, 0, 0);
+	position: relative;
+	top: 100px;
+}
+
+h3
+{
+	font: 18pt LiberationSans;
+	color: rgb(0, 0, 0);
+	text-align: center;
+}
+
+a
+{
+	font: 16pt LiberationSans;
+	color: rgb(0, 140, 198);
+}
+
+@font-face { /* Importando a fonte */
+     font-family: Hanged_Letters;
+     src: url('Hanged_Letters.ttf');
+}
+
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+   
+/* -----------------------------------------------------------
+   ------------------------- RODAPÉ --------------------------
+   ----------------------------------------------------------- */
+section#rodape
+{
+	width: 100%;
+	height: 10%;
+	background: rgb(230, 230, 230);
+	font: 16pt LiberationSans;
+	position: absolute;
+	top: 105%;
+	left: 0%;
+}
+
+section#conteudo
+{
+	font: 16pt LiberationSans;
+	text-align: center;
+	position: relative;
+	top: 30%;
+}
+/* -----------------------------------------------------------
+   --------------------- FIM DO RODAPÉ -----------------------
+   ----------------------------------------------------------- */  

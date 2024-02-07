@@ -1,0 +1,206 @@
+﻿@charset "UTF-8";
+
+img#logo
+{
+	width: 300px;
+	height: 95%;
+	position: absolute;
+	z-index: 1;
+	top: 1px;
+	left: 5%;
+}
+
+body
+{
+	background: url("imagens/imagem_cadastro_2.jpg")no-repeat center center fixed;;
+}	
+
+/* -----------------------------------------------------------
+   ----------------------- MENU ------------------------------
+   ----------------------------------------------------------- */
+header#menu /* Caixa onde os links do menu estão */
+{
+	width: 100%;
+	height: 100px;
+	background: url("imagens/imagem_menu.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+section#menu /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 35%;
+}
+
+section#sub_menu /* sub menu (escondidos) */
+{
+	width: 100%;
+	background: rgb(0, 140, 198);
+	font: 16pt Arial;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 140, 198);
+	position: absolute;
+	z-index: 1; /* Para ficar em cima das demais */
+}
+
+section#sub_menu a/* Links do sub menu (escondidos) */
+{
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+    display: block; /* Para ter o hover funcionando */
+	transition: 0.5s;
+}
+
+section#sub_menu a:hover/* Links do sub menu (escondidos) quando passa o mouse em cima */
+{
+	background: rgb(250, 242, 231);
+	color: rgb(0, 140, 198);
+}
+
+.button-menu /* Botão com os links sub menu (escondidos) hehe */
+{
+	width: 100%;
+	font: 16pt Arial;
+	font-weight: bold;
+	color: rgb(0, 140, 198);
+	background: rgba(250, 242, 231, 0.1);
+	border: none;
+	padding: 37px 10px;
+	cursor: pointer;
+}
+
+.button-login
+{
+	width: 10%;
+	height: 80%;
+	font: 16pt Arial;
+	font-weight: bold;
+	color: rgb(230, 230, 230);
+	background: rgb(0, 140, 198);
+	padding: 20px 10px; /* Borda interna */
+	border: 1px solid;
+	border-color: rgb(89, 89, 89);
+	border-radius: 5px; /* Para arredondar a borda do botão */
+	cursor: pointer;/* Para ficar com a mãozinha quando passa o mouse em cima */
+	position: absolute;
+	top: 10%;
+	left: 85%;
+}
+
+section#sub_menu /* Para esconder menu até que seja requerido */
+{
+	display: none;
+}
+
+section#menu:hover section#sub_menu /* Aparece quando passa o mouse em cima */
+{
+	display: block;
+}
+
+a:link, a:visited  /* Para tirar aparencia feia do link */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* tanto quando passar o mouse quanto quando depois de clicado */
+{
+	text-decoration: none;
+}
+/* -----------------------------------------------------------
+   -------------------- FIM DO MENU --------------------------
+   ----------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+
+section#cadastro_profissional
+{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 100px;
+	left: 25%;
+	background: rgba(230, 230, 230, 0.9);
+}
+
+fieldset
+{
+	border: 1px solid;
+	border-color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+}
+
+h1
+{
+	font: 38pt CaviarDreams;
+	color: rgb(0, 0, 0);
+}
+
+legend#sexo
+{
+	font: 18pt Arial;
+}
+
+h2#total
+{
+	font: 18pt LiberationSans;
+	text-align: center;
+}
+
+input
+{
+	width: 95%;
+	height: 5%;
+	font: 14pt Arial;
+	border: 0.5px solid;
+	margin: 1px 0;
+	border-color: rgb(0, 0, 0);
+	padding: 5px 5px;
+}
+
+select
+{
+	width: 100%;
+	height: 5%;
+	font: 14pt Arial;
+	padding: 5px 5px;
+}
+
+textarea
+{
+	width: 100%;
+	font: 14pt Courier New;
+}
+
+input#submit
+{
+	width: 100%;
+	height: 10%;
+	color: rgb(255, 255, 255);
+	border: none;
+	border-radius: 5px; /* Para arredondar a borda */
+	background: rgb(0, 51, 204);
+	cursor: pointer;
+}
+
+@font-face { /* Importando a fonte */
+     font-family: CaviarDreams;
+     src: url('CaviarDreams.ttf');
+}
+
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo_cadastro_servico.css"/>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script>
+		function pagina_inicial() // Fazer o link
+		{
+		window.location.href = "#";
+		}
+	</script>
+<head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<section id="cadastro_servico">
+
+<button class="button_pagina_inicial" onclick="#">VOLTAR</button> <!-- Botão que da acesso ao site, para entrar no site -->
+
+<h1><center>Cadastro de Serviços:</center></h1>
+<fieldset> <!-- Fieldset para criar a área -->
+<h1></h1>
+<form method="post" action="">
+	<input type="text" name="servico" placeholder="Serviço" maxlength="255" required /> <br> <!-- Campo para informar o serviço com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="preco" placeholder="Preço Médio" maxlength="255" required /> <br> <!-- Campo para informar preço médio com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="tempoparaprogramar" placeholder="Tempo necessário para conclusão do programa" maxlength="255"/> <br> <!-- Campo para informar tempo necessário para conclusão do programa com no máximo 255 caracteres obrigatório -->
+	<textarea name="descricao" cols="45" rows="5" placeholder="Descreva o serviço aqui." maxlength="255" required /></textarea> <br> <!-- Campo para descrever o serviço com no máximo 255 caracteres obrigatório -->
+<fieldset>
+
+<input type="submit" value="Cadastrar" id="submit"/> <!-- Botão de Enviar -->
+</form>
+
+</section>
+
+<!----------------------------------------------------------->
+<!------------- FIM DAS INFORMAÇÕES DO SITE ----------------->
+<!----------------------------------------------------------->
+</body>
+</html>

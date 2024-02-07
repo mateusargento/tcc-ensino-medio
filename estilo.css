@@ -1,0 +1,517 @@
+﻿@charset "UTF-8";
+
+@media screen and (max-width: 1100px)
+{
+	img#logo
+{
+	width: 500px;
+	height: 150px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Para dar sombra na logo */
+	position: absolute;
+	z-index: 1;
+	top: 150px;
+	left: 240px;
+}
+
+body
+{
+	background: rgb(59, 155, 179); /* Plano de fundo da página */
+}	
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+.button_pagina_inicial
+{	
+	width: 750px;
+	height: 150px;
+	font: 50pt LiberationSans;
+	color: rgb(0, 140, 198);
+	outline: none; /* Para remover a linha quando clicado */
+	border: none; /* Sem borda padrão */
+	background: rgb(230, 230, 230);
+	box-shadow: 0 5px rgb(0, 0, 0); /* Borda no botão */
+	border-radius: 25px; /* Para arredondar a borda */
+	cursor: pointer; /* Para aparecer a "mãozinha" quando coloca o cursor em cima */
+	margin: 0 45px;
+	position: absolute;
+	top: 1400px;
+	left: 90px;
+}
+
+.button_pagina_inicial:active /* Active - para funcionar quando clicado */
+{
+	outline: none; /* Para remover a linha quando clicado */
+	background: rgb(250, 242, 231);
+	box-shadow: none; /* Remove borda */
+	transform: translateY(4px); /* Para o botão descer, dar o efeito */
+}
+
+img#tela
+{
+	width: 780px;
+	height: 500px;
+	position: absolute;
+	left: 10%;
+}
+
+video#video_apresentacao
+{
+	width: 30%;
+	height: 35%;
+	border: 3px solid;
+	border-color: #ffffff;
+	position: absolute;
+	top: 5%;
+	left: 35%;
+	z-index: 1;
+}
+
+section#logo_servicos
+{
+	width: 100%;
+	height: 75%;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+}
+
+h1#servicos
+{
+	font: 62pt LiberationSans;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 1px rgb(255, 255, 255); /* Dar sombra a fonte */
+	position: relative;
+	top: 350px;
+	
+}
+
+section#servico_1
+{
+	width: 310px;
+	height: 200px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/design_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 650px;
+	left: 80px;
+}
+
+section#servico_2
+{
+	width: 160px;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/servico_teste.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 650px;
+	left: 45%;
+}
+
+section#servico_3
+{
+	width: 310px;
+	height: 200px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/criacao_de_sites_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 650px;
+	left: 500px;
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+}
+
+@media screen and (min-width: 1200px)
+{
+img#logo
+{
+	width: 250px;
+	height: 85px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Para dar sombra na logo */
+	position: absolute;
+	z-index: 1;
+	top: 15%;
+	left: 40%;
+}
+
+body
+{
+	background: url("imagens/imagem_inicial.jpg")no-repeat center center fixed; /* Plano de fundo da página */
+}	
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+.button_pagina_inicial
+{	
+	width: 15%;
+	height: 10%;
+	font: 16pt LiberationSans;
+	color: rgb(0, 140, 198);
+	outline: none; /* Para remover a linha quando clicado */
+	border: none; /* Sem borda padrão */
+	background: rgb(230, 230, 230);
+	box-shadow: 0 5px rgb(0, 0, 0); /* Borda no botão */
+	border-radius: 25px; /* Para arredondar a borda */
+	cursor: pointer; /* Para aparecer a "mãozinha" quando coloca o cursor em cima */
+	margin: 0 45px;
+	position: absolute;
+	top: 90%;
+	left: 40%;
+}
+
+.button_pagina_inicial:active /* Active - para funcionar quando clicado */
+{
+	outline: none; /* Para remover a linha quando clicado */
+	background: rgb(250, 242, 231);
+	box-shadow: none; /* Remove borda */
+	transform: translateY(4px); /* Para o botão descer, dar o efeito */
+}
+
+img#tela
+{
+	width: 40%;
+	height: 50%;
+	position: absolute;
+	left: 30%;
+}
+
+video#video_apresentacao
+{
+	width: 30%;
+	height: 35%;
+	border: 3px solid;
+	border-color: #ffffff;
+	position: absolute;
+	top: 5%;
+	left: 35%;
+	z-index: 1;
+}
+
+section#logo_servicos
+{
+	width: 100%;
+	height: 75%;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+}
+
+h1#servicos
+{
+	font: 22pt LiberationSans;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 1px rgb(255, 255, 255); /* Dar sombra a fonte */
+	position: relative;
+	top: 45%;
+	
+}
+
+section#servico_1
+{
+	width: 160px;
+	height: 180px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/design_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 60%;
+	left: 20%;
+}
+
+section#servico_1:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+}
+
+section#servico_2
+{
+	width: 160px;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/servico_teste.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 65%;
+	left: 45%;
+}
+
+section#servico_2:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+	position: absolute;
+	top: 65%;
+	left: 35%;
+}
+
+section#servico_3
+{
+	width: 160px;
+	height: 180px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/criacao_de_sites_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 60%;
+	left: 60%;
+}
+
+section#servico_3:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+	position: absolute;
+	top: 60%;
+	left: 40%;
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+}
+
+@media screen and (min-width: 1900px)
+{
+img#logo
+{
+	width: 250px;
+	height: 85px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Para dar sombra na logo */
+	position: absolute;
+	z-index: 1;
+	top: 15%;
+	left: 45%;
+}
+
+body
+{
+	background: url("imagens/imagem_inicial.jpg")no-repeat center center fixed; /* Plano de fundo da página */
+}	
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+.button_pagina_inicial
+{	
+	width: 15%;
+	height: 10%;
+	font: 16pt LiberationSans;
+	color: rgb(0, 140, 198);
+	outline: none; /* Para remover a linha quando clicado */
+	border: none; /* Sem borda padrão */
+	background: rgb(230, 230, 230);
+	box-shadow: 0 5px rgb(0, 0, 0); /* Borda no botão */
+	border-radius: 25px; /* Para arredondar a borda */
+	cursor: pointer; /* Para aparecer a "mãozinha" quando coloca o cursor em cima */
+	margin: 0 45px;
+	position: absolute;
+	top: 90%;
+	left: 40%;
+}
+
+.button_pagina_inicial:active /* Active - para funcionar quando clicado */
+{
+	outline: none; /* Para remover a linha quando clicado */
+	background: rgb(250, 242, 231);
+	box-shadow: none; /* Remove borda */
+	transform: translateY(4px); /* Para o botão descer, dar o efeito */
+}
+
+img#tela
+{
+	width: 40%;
+	height: 50%;
+	position: absolute;
+	left: 30%;
+}
+
+video#video_apresentacao
+{
+	width: 30%;
+	height: 35%;
+	border: 3px solid;
+	border-color: #ffffff;
+	position: absolute;
+	top: 5%;
+	left: 35%;
+	z-index: 1;
+}
+
+section#logo_servicos
+{
+	width: 100%;
+	height: 75%;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+}
+
+h1#servicos
+{
+	font: 22pt LiberationSans;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 1px rgb(255, 255, 255); /* Dar sombra a fonte */
+	position: relative;
+	top: 45%;
+	
+}
+
+section#servico_1
+{
+	width: 160px;
+	height: 180px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/design_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 60%;
+	left: 20%;
+}
+
+section#servico_1:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+}
+
+section#servico_2
+{
+	width: 160px;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/servico_teste.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 65%;
+	left: 45%;
+}
+
+section#servico_2:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+	position: absolute;
+	top: 65%;
+	left: 35%;
+}
+
+section#servico_3
+{
+	width: 160px;
+	height: 180px;
+	font: 16pt LiberationSans;
+	color: rgba(0, 0, 0, 0);
+	background: url("imagens/criacao_de_sites_logo.png")no-repeat center center;
+	border: 1px solid;
+	border-color: rgb(255, 255, 255);
+	margin: 0 57px;
+	padding: 5px 5px;
+	cursor: pointer; /* Para ficar com a mãozinha quando coloca o mouse em cima */
+	transition: 0.9s; /* Transição do efeito */
+	position: absolute;
+	top: 60%;
+	left: 60%;
+}
+
+section#servico_3:hover
+{
+	background: rgba(255, 255, 255, 0.9);
+	width: 30%;
+	height: 166px;
+	font: 16pt LiberationSans;
+	color: rgb(0, 0, 0);
+	z-index: 1; /* Para ficar por cima */
+	position: absolute;
+	top: 60%;
+	left: 40%;
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+}

@@ -1,0 +1,33 @@
+﻿<?php
+error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+mysql_connect('localhost','root','');
+mysql_select_db('compras');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obrigado pela compra!</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="estilo_compras_aplicativos.css"/>
+	<link rel="shortcut icon" href="favicon.png"/>
+<script>
+
+	function voltar() // Fazer o link
+	{
+		window.location.href = "selecionar_quiz_programacao_e_outros_aplicativos.php";
+	}
+		
+</script>
+</head>
+<body>
+<section id='login'>
+
+		<h1><center>Aplicativos</center></h1>
+		<fieldset> <!-- Fieldset para criar a área -->
+		<h1></h1>
+		<h3>Sua compra foi efetuada com sucesso! <br> Aguarde confirmação no seu email e/ou na área de compra aqui no site. <br> Obrigado por nos escolher!</h3>
+		<center><button class='button_voltar' onclick='voltar()'>VOLTAR</button></center> <br><br><!-- Botão para voltar -->
+	</section>
+</body>
+</html>

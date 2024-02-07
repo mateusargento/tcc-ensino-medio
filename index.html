@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo.css"/>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script>
+		function pagina_inicial() //Fazer o link
+		{
+			window.location.href = "pagina_inicial.html";
+		}
+		
+		function selecao_de_servicos_design() //Fazer o link
+		{
+			window.location.href = "loja.html";
+		}
+		
+		function selecao_de_servicos_programacao_e_outros() //Fazer o link
+		{
+			window.location.href = "loja.html";
+		}
+	</script>
+</head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<img src="imagens/logo_pagina.png" id="logo" title="NW Freela's"> <!-- Logo -->
+
+<img src="imagens/tela.png" id="tela"> <!-- Fundo de tela para vídeo -->
+
+<!-- Vídeo de apresentação -->
+<!-- <video controls autoplay id="video_apresentacao">
+  <source src="" type="video/mp4">
+</video> -->
+
+<!-- Botão para entrar no site -->
+<center><button class="button_pagina_inicial" onclick="pagina_inicial()">ENTRAR NO SITE</button></center> <!-- Botão que da acesso ao site, para entrar no site -->
+
+<section id="logo_servicos"> <!-- Cada serviço, listados pelo site -->
+	<h1 id="servicos"><center>Estes são nossos serviços:</center></h1> <br>
+	<section id="servico_1" onclick="selecao_de_servicos_design()">
+	<center>Trabalhamos com criações de logotipos, capas (para facebook, youtube, etc), layouts para banners e arte para cartão de divulgação: <br><br>
+	Qualificação do serviço: Sem ainda </center>
+	
+	</section>
+	<section id="servico_3" onclick="selecao_de_servicos_programacao_e_outros()">
+	<center>Trabalhamos com criações de site para diversas plataformas, sites responsivos para desktop, tablets, smartphones e TVs, criação de aplicativos e sistemas: <br><br>
+	Qualificação do serviço: Sem ainda </center>
+	</section>
+</section>
+<!----------------------------------------------------------->
+<!------------- FIM DAS INFORMAÇÕES DO SITE ----------------->
+<!----------------------------------------------------------->
+
+</body>
+</html>

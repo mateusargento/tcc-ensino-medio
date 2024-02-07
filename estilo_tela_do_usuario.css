@@ -1,0 +1,667 @@
+﻿@charset "UTF-8";
+
+@media screen and (max-width: 1100px)
+{
+img#logo_mobile 
+{
+	width: 600px;
+	height: 200px;
+	position: absolute;
+	z-index: 1; /* Para ficar em cima */
+	top: 40px;
+	left: 50px;
+}
+
+body
+{
+	background: url("imagens/plano_de_fundo.jpg")no-repeat center center fixed;
+}
+
+/* -----------------------------------------------------------
+   ----------------------- MENU ------------------------------
+   ----------------------------------------------------------- */
+
+header#menu
+{
+	display: none;
+}
+   
+section#menu_mobile_mobile /* Menu */
+{
+	width: 100%;
+	height: 300px;
+	background: url("imagens/imagem_menu.jpg");
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+section#sub_menu_mobile /* sub menu (escondidos) */
+{
+	width: 800px;
+	background: rgb(0, 140, 198);
+	border: 1px solid;
+	border-color: rgb(0, 140, 198);
+	position: absolute;
+	top: 300px;
+	left: 150px;
+	z-index: 1;
+}
+
+section#sub_menu_mobile a/* Links do sub menu (escondidos) */
+{
+	font: 36pt LiberationSans;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+    display: block; /* Para ter o hover funcionando */
+	transition: 0.5s;
+}
+
+section#sub_menu_mobile a:hover/* Links do sub menu (escondidos) quando passa o mouse em cima */
+{
+	background: rgb(0, 140, 198);
+	color: rgb(255, 255, 255);
+}
+
+.button-menu-mobile /* Botão com os links sub menu (escondidos) hehe */
+{
+	width: 250px;
+	height: 300px;
+	font: 36pt LiberationSans;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	padding: 20px 30px; /* Borda interna */
+	border: 1px solid;
+	cursor: pointer; /* Para ficar com a mãozinha quando passa o mouse em cima */
+	position: relative;
+	top: 0px;
+	left: 700px;
+}
+
+section#sub_menu_mobile /* Para esconder menu até que seja requerido */
+{
+	display: none;
+}
+
+section#menu_mobile:hover section#sub_menu_mobile /* Aparece quando passa o mouse em cima */
+{
+	display: block;
+}
+
+img#qr_code
+{
+	width: 150px; 
+	height: 150px; 
+	position: fixed; 
+	top: 500px; 
+	left: 1150px;	
+}
+
+a:link, a:visited  /* Para tirar aparencia feia do link */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* tanto quando passar o mouse quanto quando depois de clicado */
+{
+	text-decoration: none;
+}
+/* -----------------------------------------------------------
+   -------------------- FIM DO MENU --------------------------
+   ----------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+
+section#tela_do_usuario
+{
+	width: 100%;
+	height: 1500px;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	background: rgba(230, 230, 230, 0.9);
+}
+
+fieldset
+{
+	height: 1000px;
+	border: 1px solid;
+	border-color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+}
+
+h1
+{
+	font: 62pt CaviarDreams;
+	color: rgb(0, 0, 0);
+}
+
+img#compras_logo
+{
+	width: 380px;
+	height: 420px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 50px;
+}
+
+img#perguntas_logo
+{
+	width: 380px;
+	height: 420px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 130px;
+}
+
+img#dados_da_conta_logo
+{
+	width: 380px;
+	height: 420px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: absolute;
+	top: 850px;
+	left: 300px;
+}
+
+a#compras
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 10%;
+}
+
+a#perguntas
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 30%;
+}
+
+a#sua_conta
+{
+	font: 14pt Arial;
+	position: relative;
+	top: ;
+	left: 45%;
+}
+
+@font-face { /* Importando a fonte */
+     font-family: CaviarDreams;
+     src: url('CaviarDreams.ttf');
+}
+
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+}
+
+@media screen and (min-width: 1200px)
+{
+img#logo
+{
+	width: 300px;
+	height: 95%;
+	position: absolute;
+	z-index: 1;
+	top: 1px;
+	left: 5%;
+}
+
+body
+{
+	background: url("imagens/imagem_cadastro.jpg")no-repeat center center fixed;;
+}	
+
+/* -----------------------------------------------------------
+   ----------------------- MENU ------------------------------
+   ----------------------------------------------------------- */
+section#menu_mobile_mobile
+{
+	display: none;
+}
+
+header#menu /* Caixa onde os links do menu estão */
+{
+	width: 100%;
+	height: 100px;
+	background: url("imagens/imagem_menu.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+section#menu /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_loja_especifico /* Menu */
+{
+	width: 10%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_login /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	border: 1px solid;
+	position: relative;
+	top: 0%;
+	left: 85%;
+}
+
+section#sub_menu /* sub menu (escondidos) */
+{
+	width: 100%;
+	background: rgb(0, 140, 198);
+	font: 16pt LiberationSans;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 140, 198);
+	position: absolute;
+	z-index: 1; /* Para ficar em cima das demais */
+}
+
+section#sub_menu a/* Links do sub menu (escondidos) */
+{
+	color: rgb(255, 255, 255);
+	padding: 10px 20px; /* Borda interna */
+    display: block; /* Para ter o hover funcionando */
+	transition: 0.5s;
+}
+
+section#sub_menu a:hover/* Links do sub menu (escondidos) quando passa o mouse em cima */
+{
+	background: rgb(250, 242, 231);
+	color: rgb(0, 140, 198);
+}
+
+.button-menu /* Botão com os links sub menu (escondidos) hehe */
+{
+	width: 100%;
+	font: 16pt LiberationSans;
+	font-weight: bold;
+	color: rgb(0, 140, 198);
+	background: rgba(250, 242, 231, 0.1);
+	border: none;
+	padding: 37px 10px; /* Borda Interna */
+	cursor: pointer; /* Para ficar com uma mãozinha quando passa o mouse em cima */
+}
+
+section#sub_menu /* Para esconder menu até que seja requerido */
+{
+	display: none;
+}
+
+section#menu:hover section#sub_menu /* Aparece quando passa o mouse em cima */
+{
+	display: block;
+}
+
+a:link, a:visited  /* Para tirar aparencia feia do link */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* tanto quando passar o mouse quanto quando depois de clicado */
+{
+	text-decoration: none;
+}
+/* -----------------------------------------------------------
+   -------------------- FIM DO MENU --------------------------
+   ----------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+
+section#tela_do_usuario
+{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 100px;
+	left: 25%;
+	background: rgba(230, 230, 230, 0.9);
+}
+
+fieldset
+{
+	border: 1px solid;
+	border-color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+}
+
+h1
+{
+	font: 38pt CaviarDreams;
+	color: rgb(0, 0, 0);
+}
+
+img#compras_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 5%;
+}
+
+img#perguntas_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 15%;
+}
+
+img#dados_da_conta_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: absolute;
+	top: ;
+	left: 70%;
+}
+
+a#compras
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 10%;
+}
+
+a#perguntas
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 30%;
+}
+
+a#sua_conta
+{
+	font: 14pt Arial;
+	position: relative;
+	top: ;
+	left: 45%;
+}
+
+@font-face { /* Importando a fonte */
+     font-family: CaviarDreams;
+     src: url('CaviarDreams.ttf');
+}
+
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+}
+
+@media screen and (min-width: 1920px)
+{
+img#logo
+{
+	width: 300px;
+	height: 95%;
+	position: absolute;
+	z-index: 1;
+	top: 1px;
+	left: 5%;
+}
+
+body
+{
+	background: url("imagens/imagem_cadastro.jpg")no-repeat center center fixed;;
+}	
+
+/* -----------------------------------------------------------
+   ----------------------- MENU ------------------------------
+   ----------------------------------------------------------- */
+section#menu_mobile_mobile
+{
+	display: none;
+}
+
+header#menu /* Caixa onde os links do menu estão */
+{
+	width: 100%;
+	height: 100px;
+	background: url("imagens/imagem_menu.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+section#menu /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_loja_especifico /* Menu */
+{
+	width: 10%;
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	left: 30%;
+}
+
+section#menu_login /* Menu */
+{
+	width: 15%;
+	display: inline-block;
+	border: 1px solid;
+	position: relative;
+	top: 0%;
+	left: 85%;
+}
+
+section#sub_menu /* sub menu (escondidos) */
+{
+	width: 100%;
+	background: rgb(0, 140, 198);
+	font: 22pt LiberationSans;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 140, 198);
+	position: absolute;
+	z-index: 1; /* Para ficar em cima das demais */
+}
+
+section#sub_menu a/* Links do sub menu (escondidos) */
+{
+	color: rgb(255, 255, 255);
+	padding: 10px 20px; /* Borda interna */
+    display: block; /* Para ter o hover funcionando */
+	transition: 0.5s;
+}
+
+section#sub_menu a:hover/* Links do sub menu (escondidos) quando passa o mouse em cima */
+{
+	background: rgb(250, 242, 231);
+	color: rgb(0, 140, 198);
+}
+
+.button-menu /* Botão com os links sub menu (escondidos) hehe */
+{
+	width: 100%;
+	font: 22pt LiberationSans;
+	font-weight: bold;
+	color: rgb(0, 140, 198);
+	background: rgba(250, 242, 231, 0.1);
+	border: none;
+	padding: 33px 10px; /* Borda Interna */
+	cursor: pointer; /* Para ficar com uma mãozinha quando passa o mouse em cima */
+}
+
+section#sub_menu /* Para esconder menu até que seja requerido */
+{
+	display: none;
+}
+
+section#menu:hover section#sub_menu /* Aparece quando passa o mouse em cima */
+{
+	display: block;
+}
+
+a:link, a:visited  /* Para tirar aparencia feia do link */
+{
+	text-decoration: none;
+}
+
+a:hover, a:active /* tanto quando passar o mouse quanto quando depois de clicado */
+{
+	text-decoration: none;
+}
+/* -----------------------------------------------------------
+   -------------------- FIM DO MENU --------------------------
+   ----------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+   --------------- INFORMAÇÕES DO SITE -----------------------
+   ----------------------------------------------------------- */
+
+section#tela_do_usuario
+{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 100px;
+	left: 25%;
+	background: rgba(230, 230, 230, 0.9);
+}
+
+fieldset
+{
+	border: 1px solid;
+	border-color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+}
+
+h1
+{
+	font: 42pt CaviarDreams;
+	color: rgb(0, 0, 0);
+}
+
+img#compras_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 5%;
+}
+
+img#perguntas_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	top: ;
+	left: 25%;
+}
+
+img#dados_da_conta_logo
+{
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	position: absolute;
+	top: ;
+	left: 75%;
+}
+
+a#compras
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 10%;
+}
+
+a#perguntas
+{
+	font: 16pt Arial;
+	position: relative;
+	top: ;
+	left: 30%;
+}
+
+a#sua_conta
+{
+	font: 14pt Arial;
+	position: relative;
+	top: ;
+	left: 45%;
+}
+
+@font-face { /* Importando a fonte */
+     font-family: CaviarDreams;
+     src: url('CaviarDreams.ttf');
+}
+
+@font-face { /* Importando a fonte */
+     font-family: LiberationSans;
+     src: url('LiberationSans.ttf');
+}
+/* -----------------------------------------------------------
+   -------------- FIM DAS INFORMAÇÕES DO SITE ----------------
+   ----------------------------------------------------------- */
+}

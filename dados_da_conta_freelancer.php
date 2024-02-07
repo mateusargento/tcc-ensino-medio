@@ -1,0 +1,322 @@
+﻿<?php
+error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+mysql_connect('localhost','root','');
+mysql_select_db('cadastro');
+?>
+
+<?php
+session_start();
+// Se não estiver logado
+if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"]))
+{
+	header("Location: login.html"); // Redirecionar para a pagina de login
+	exit; // Fechar qualquer sessão
+}
+// Se estiver logado
+else
+{
+
+}
+
+?>
+
+<?php
+
+	$email = $_SESSION['login'];
+
+	// Nome
+	$sql = "SELECT nome FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$nome = $dados['nome'];
+	
+	// Sobrenome
+	$sql = "SELECT sobrenome FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$sobrenome = $dados['sobrenome'];
+	
+	// CPF
+	$sql = "SELECT cpf FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$cpf = $dados['cpf'];
+	
+	// RG
+	$sql = "SELECT rg FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$rg = $dados['rg'];
+	
+	// Endereço
+	$sql = "SELECT endereco FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$endereco = $dados['endereco'];
+	
+	// Número da casa
+	$sql = "SELECT numerodacasa FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$numerodacasa = $dados['numerodacasa'];
+	
+	// Complemento
+	$sql = "SELECT complemento FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$complemento = $dados['complemento'];
+	
+	// Bairro
+	$sql = "SELECT bairro FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$bairro = $dados['bairro'];
+	
+	// Cidade
+	$sql = "SELECT cidade FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$cidade = $dados['cidade'];
+	
+	// UF
+	$sql = "SELECT uf FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$uf = $dados['uf'];
+	
+	// CEP
+	$sql = "SELECT cep FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$cep = $dados['cep'];
+	
+	// Telefone
+	$sql = "SELECT telefone FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$telefone = $dados['telefone'];
+	
+	// Celular
+	$sql = "SELECT celular FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$celular = $dados['celular'];
+	
+	// Data de Nascimento
+	$sql = "SELECT datadenascimento FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$datadenascimento = $dados['datadenascimento'];
+	
+	// Profissão
+	$sql = "SELECT profissao FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$profissao = $dados['profissao'];
+	
+	// Link Curriculo Lattes
+	$sql = "SELECT linkcurriculolattes FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$linkcurriculolattes = $dados['linkcurriculolattes'];
+	
+	// Sexo
+	$sql = "SELECT sexo FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$sexo = $dados['sexo'];
+	
+	// Descrição
+	$sql = "SELECT descricao FROM cadastro_do_profissional WHERE email = '$email' ";
+	mysql_query($sql);
+	$resultado = mysql_query($sql);
+	$dados = mysql_fetch_array($resultado);
+	/* Nome da Tabela */
+	$descricao = $dados['descricao'];
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo_dados_da_conta_freelancer.css"/>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.maskedinput.js" ></script>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script>
+		function login() // Fazer o link
+		{
+			window.location.href = "login.html";
+		}
+		
+		function faleconosco() // Fazer o link
+		{
+			window.location.href = "fale_conosco.html";
+		}
+		
+		function loja() // Fazer o link
+		{
+			window.location.href = "loja.html";
+		}
+		
+		function voltar() // Fazer o link
+		{
+			window.location.href = "tela_do_freelancer.php";
+		}
+		
+		function sair()
+		{
+			window.location.href = "logout.php";
+		}
+		
+		jQuery(function($){ // Máscara
+			$("#cpf").mask("333.333.333-33"); // Facilita preenchendo os espaços do CPF
+			$("#rg").mask("33.333.333-3"); // Facilita preenchendo os espaços do RG
+			$("#cep").mask("33333-333"); // Facilita preenchendo os espaços do CEP
+			$("#telefone").mask("(33) 3333-3333"); // Facilita preenchendo os espaços do Telefone
+			$("#celular").mask("(33) 33333-3333"); // Facilita preenchendo os espaços do Celular
+			$("#datadenascimento").mask("33/33/3333"); // Facilita preenchendo os espaços da Data de Nascimento
+		});
+	</script>
+</head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------------- MENU ------------------------------>
+<!----------------------------------------------------------->
+<header id="menu">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo" title="NW Freela's"></a> <!-- Logo -->
+
+<section id="menu_loja_especifico"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="loja()">LOJA</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">SERVIÇOS</button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>Programação e outros</center></a>
+		<a href="selecao_de_servicos_design.html"><center>Design</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">CADASTRE-SE</button> <!-- Botão CADASTRE-SE -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="cadastro_cliente.html"><center>Clientes</center></a>
+		<a href="cadastro_profissional.html"><center>Profissionais</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="faleconosco()">FALE CONOSCO</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="sair()">SAIR </button> <!-- Botão LOGIN -->
+</section>
+
+</header>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO MENU -------------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<section id="cadastro_profissional">
+
+<h1><center>Dados da conta:</center></h1>
+<fieldset> <!-- Fieldset para criar a área -->
+<h1></h1>
+
+<fieldset><legend id="sexo">Aqui você pode alterar seus dados:</legend>
+<form method="post" action="alteracoes_cadastrop_bd.php">
+	<input type="text" name="nome" placeholder="Nome" value="<?php echo $nome; ?>" maxlength="255" required /> <br> <!-- Campo para informar o nome com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="sobrenome" placeholder="Sobrenome" value="<?php echo $sobrenome; ?>" maxlength="255" required /> <br> <!-- Campo para informar sobrenome com no máximo 255 caracteres obrigatório -->
+	<input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>" required /> <br> <!-- Campo para informar email obrigatório -->
+	<input type="text" name="cpf" placeholder="CPF" value="<?php echo $cpf; ?>" maxlength="11" id="cpf" required /> <!-- Campo para informar CPF obrigatório -->
+	<input type="text" name="rg" placeholder="RG" value="<?php echo $rg; ?>" maxlength="9" id="rg" required /> <!-- Campo para informar RG obrigatório -->
+	<input type="text" name="endereco" placeholder="Endereço" value="<?php echo $endereco; ?>" maxlength="255" required /> <!-- Campo para informar endereço com no máximo 255 caracteres obrigatório-->
+	<input type="text" name="numerodacasa" placeholder="Número" value="<?php echo $numerodacasa; ?>" id="numerodacasa" maxlength="255" required /> <!-- Campo para informar número da casa com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="complemento" placeholder="Complemento" value="<?php echo $complemento; ?>" id="complemento" maxlength="255" required /> <!-- Campo para informar complemento com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="bairro" placeholder="Bairro" value="<?php echo $bairro; ?>" maxlength="255" required /> <!-- Campo para informar Bairro com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="cidade" placeholder="Cidade" value="<?php echo $cidade; ?>" id="cidade" maxlength="255" required /> <!-- Campo para informar Cidade com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="uf" placeholder="UF" id="uf" value="<?php echo $uf; ?>" maxlength="2" required /> <!-- Campo para informar UF como no máximo 2 caracteres obrigatório -->
+	<input type="text" name="cep" placeholder="CEP" value="<?php echo $cep; ?>" maxlength="8" required id="cep" /> <!-- Campo para informar CEP como no máximo 8 caracteres obrigatório -->
+	<input type="text" name="telefone" placeholder="Telefone" value="<?php echo $telefone; ?>" maxlength="10" id="telefone" required /> <!-- Campo para informar telefone com no máximo 10 números obrigatório -->
+	<input type="text" name="celular" placeholder="Celular" value="<?php echo $celular; ?>" maxlength="11" id="celular" required /> <!-- Campo para informar celular com no máximo 11 números obrigatório -->
+	<input type="text" name="datadenascimento" placeholder="Data de Nascimento" value="<?php echo $datadenascimento; ?>" maxlength="10" required id="datadenascimento" /> <br> <!-- Campo para informar data de nascimento com no máximo 8 dígitos obrigatório -->
+	<input type="text" name="profissao" placeholder="Profissão" value="<?php echo $profissao; ?>" maxlength="255" required /> <!-- Campo para informar profissão com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="linkcurriculolattes" value="<?php echo $linkcurriculolattes; ?>" placeholder="Informe seu link Currículo Lattes" maxlength="255" required /> <!-- Campo para informar o link do Currículo Lattes obrigatório -->
+	<input type="password" name="senha" placeholder="Troque sua senha" maxlength="255" required /> <br> <!-- Campo para informar senha com no máximo 255 caracteres obrigatório -->
+	<input type="password" name="senha" placeholder="Confirme sua senha" maxlength="255" required /> <br><br><br> <!-- Campo para informar o confirme sua senha com no máximo 255 caracteres obrigatório -->
+</fieldset> <br>
+
+<?php
+	if($sexo == "Masculino")
+	{
+		$masculino = "selected";
+	}
+	else
+	{
+		$feminino = "selected";
+	}
+	
+?>
+
+<fieldset><legend id="sexo">Sexo:</legend>
+	<select name="sexo" required> <!-- Selecionar opções -->
+		<option <?php echo $masculino ?>>Masculino</option> <!-- Opção -->
+	  	<option <?php echo $feminino ?>>Feminino</option> <!-- Opção -->
+	</select> <br><br>
+
+<textarea name="descricao" cols="45" rows="5" placeholder="Descreva seu conhecimento profissional como experiência, cursos e empregos aqui." required />
+</textarea> <br> <!-- Campo para descrever conhecimento profissional -->
+</fieldset> <br>
+
+	<input type="submit" value="Salvar alterações" id="submit"/> <br><br> <!-- Botão de Enviar -->
+</form>
+
+<center><button class="button_voltar" onclick="voltar()">VOLTAR</button></center> <br><br><!-- Botão para voltar -->
+
+</section>
+</body>
+</html>

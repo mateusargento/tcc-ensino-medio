@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" href="estilo_cadastro_cliente.css"/>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.maskedinput.js" ></script>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<script>
+		function login() // Fazer o link
+		{
+			window.location.href = "login.html";
+		}
+		
+		function faleconosco() // Fazer o link
+		{
+			window.location.href = "fale_conosco.html";
+		}
+		
+		function loja() // Fazer o link
+		{
+			window.location.href = "loja.html";
+		}
+		
+		jQuery(function($){ // Máscara
+			$("#cpf").mask("333.333.333-33"); // Facilita preenchendo os espaços do CPF
+			$("#rg").mask("33.333.333-3"); // Facilita preenchendo os espaços do RG
+			$("#cep").mask("33333-333"); // Facilita preenchendo os espaços do CEP
+			$("#telefone").mask("(33) 3333-3333"); // Facilita preenchendo os espaços do Telefone
+			$("#celular").mask("(33) 33333-3333"); // Facilita preenchendo os espaços do Celular
+			$("#datadenascimento").mask("33/33/3333"); // Facilita preenchendo os espaços da Data de Nascimento
+		});
+		
+		function validarsenha() // Para marcar a caixa com vermelho se a senha e confirmesenha não estiverem iguais, pega valor quando clica no submit
+		{
+			var senha = document.getElementById('senha').value; // Cria a variável senha com o valor que está na caixa senha
+			var confirmesenha = document.getElementById('confirmesenha').value; // Cria a variavel confirmesenha com o valor que está na caixa confirmesenha
+			
+			if (senha != confirmesenha) // Se senha e confirmesenha forem diferentes
+			{
+				alert("Senhas não são iguais, informe senhas iguais e confirme."); // Criar alerta para informar que senhas estão diferentes
+				document.getElementById('senha').focus(); // Selecionar a caixa senha
+				document.getElementById('senha').style.borderColor = "rgb(210, 0, 0)"; // Criar uma borda vermelha na caixa senha
+				document.getElementById('confirmesenha').style.borderColor = "rgb(210, 0, 0)"; // Criar uma borda vermelha na caixa confirmesenha
+				return false; // retorno para confirmar a ação da verificação
+			}
+		}
+	</script>
+</head>
+<body>
+
+<!----------------------------------------------------------->
+<!----------------------- MENU ------------------------------>
+<!----------------------------------------------------------->
+<header id="menu">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo" title="NW Freela's"></a> <!-- Logo -->
+
+<section id="menu_loja_especifico"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="loja()">LOJA</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">SERVIÇOS</button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>Programação e outros</center></a>
+		<a href="selecao_de_servicos_design.html"><center>Design</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu">CADASTRE-SE</button> <!-- Botão CADASTRE-SE -->
+	<section id="sub_menu"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="cadastro_cliente.html"><center>Clientes</center></a>
+		<a href="cadastro_profissional.html"><center>Profissionais</center></a>
+	</section>
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="faleconosco()">FALE CONOSCO</button> <!-- Botão FALE CONOSCO -->
+</section>
+
+<section id="menu"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu" onclick="login()">LOGIN </button> <!-- Botão LOGIN -->
+</section>
+
+</header>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO MENU -------------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!------------------- MENU MOBILE --------------------------->
+<!----------------------------------------------------------->
+
+<section id="menu_mobile_mobile">
+
+<a href="pagina_inicial.html"><img src="imagens/logo_pagina.png" id="logo_mobile" title="NW Freela's"></a> <!-- Logo -->
+
+<section id="menu_mobile"> <!-- As partes do menu ficam dentro -->
+	<button class="button-menu-mobile"><img src="imagens/menu_mobile.png" width="200px"></button> <!-- Botão SERVIÇOS -->
+	<section id="sub_menu_mobile"> <!-- Sub menu (escondido) de SERVIÇOS -->
+		<a href="selecao_de_servicos_programacao_e_outros.html"><center>SERVIÇOS: Programação e outros</center></a><br>
+		<a href="selecao_de_servicos_design.html"><center>SERVIÇOS: Design</center></a><br>
+		<a href="loja.html"><center>LOJA</center></a><br>
+		<a href="cadastro_cliente.html"><center>CADASTRE - SE: Clientes</center></a><br>
+		<a href="cadastro_profissional.html"><center>CADASTRE - SE: Profissionais</center></a><br>
+		<a href="fale_conosco.html"><center>FALE CONOSCO</center></a><br>
+		<a href="login.html"><center>LOGIN</center></a>
+	</section>
+</section>
+
+</section>
+
+<!----------------------------------------------------------->
+<!---------------- FIM DO MENU MOBILE ----------------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!----------------- INFORMAÇÕES DO SITE --------------------->
+<!----------------------------------------------------------->
+<section id="cadastro_cliente">
+
+<h1><center>Cadastro de Clientes:</center></h1>
+<fieldset> <!-- Fieldset para criar a área -->
+<h1></h1>
+<form method="post" action="cadastroc_bd.php" name="formulario" onsubmit="return validarsenha()"> <!-- return para confirmar a ação da verificação da senha -->
+	<input type="text" name="nome" placeholder="Nome" maxlength="15" required /> <br> <!-- Campo para informar o nome com no máximo 15 caracteres obrigatório -->
+	<input type="text" name="sobrenome" placeholder="Sobrenome" maxlength="255" required /> <br> <!-- Campo para informar sobrenome com no máximo 255 caracteres obrigatório -->
+	<input type="email" name="email" placeholder="E-mail" required /> <br> <!-- Campo para informar email obrigatório -->
+	<input type="text" name="cpf" placeholder="CPF" maxlength="11" required id="cpf"/> <!-- Campo para informar CPF obrigatório -->
+	<input type="text" name="rg" placeholder="RG" maxlength="9" required id="rg" /> <!-- Campo para informar RG obrigatório -->
+	<input type="text" name="endereco" placeholder="Endereço" maxlength="255" required /> <!-- Campo para informar endereço com no máximo 255 caracteres obrigatório-->
+	<input type="text" name="numerodacasa" placeholder="Número da Casa" id="numerodacasa" maxlength="255" required /> <!-- Campo para informar número da casa com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="complemento" placeholder="Complemento" id="complemento" maxlength="255" required /> <!-- Campo para informar complemento com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="bairro" placeholder="Bairro" maxlength="255" required /> <!-- Campo para informar Bairro com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="cidade" placeholder="Cidade" id="cidade" maxlength="255" required /> <!-- Campo para informar Cidade com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="uf" placeholder="UF" id="uf" maxlength="2" required /> <!-- Campo para informar UF como no máximo 2 caracteres obrigatório -->
+	<input type="text" name="cep" placeholder="CEP" maxlength="9" required id="cep"/> <!-- Campo para informar CEP como no máximo 8 caracteres obrigatório -->
+	<input type="text" name="telefone" placeholder="Telefone" maxlength="10" id="telefone" required /> <!-- Campo para informar telefone com no máximo 10 números obrigatório -->
+	<input type="text" name="celular" placeholder="Celular" maxlength="11" id="celular" required /> <!-- Campo para informar celular com no máximo 11 números obrigatório -->
+	<input type="text" name="datadenascimento" placeholder="Data de Nascimento" maxlength="8" required id="datadenascimento" /> <br> <!-- Campo para informar data de nascimento com no máximo 8 dígitos obrigatório -->
+	<input type="password" name="senha" id="senha" placeholder="Senha" maxlength="255" required /> <br> <!-- Campo para informar senha com no máximo 255 caracteres obrigatório -->
+	<input type="password" name="confirmesenha" id="confirmesenha" placeholder="Confirme sua senha" maxlength="255" required /> <br><br><br> <!-- Campo para informar o confirme sua senha com no máximo 255 caracteres obrigatório -->
+	<input type="text" name="tipodelogin" placeholder="Tipo de login" value="usuario" maxlength="255" style="display: none" required /> <!-- Campo para informar o tipo de login com no máximo 255 caracteres obrigatório -->
+<fieldset>
+
+<fieldset><legend id="sexo">Sexo:</legend>
+	  <select name="sexo" > <!-- Selecionar opções -->
+		<option>Masculino</option> <!-- Opção -->
+	  	<option>Feminino</option> <!-- Opção -->
+	  </select>	
+</fieldset> <br>
+
+	<input type="submit" value="Cadastrar" id="submit"/>
+</form>
+
+</section>
+
+<!----------------------------------------------------------->
+<!------------- FIM DAS INFORMAÇÕES DO SITE ----------------->
+<!----------------------------------------------------------->
+
+<!----------------------------------------------------------->
+<!------------------------ RODAPÉ --------------------------->
+<!----------------------------------------------------------->
+<section id="rodape">
+	<section id="conteudo">TODOS OS DIREITOS RESERVADOS - NW FREELANCER'S 2017 ©</section>
+</section>
+<!----------------------------------------------------------->
+<!-------------------- FIM DO RODAPÉ ------------------------>
+<!----------------------------------------------------------->
+</body>
+</html>
